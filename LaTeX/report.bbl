@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{Doi}
+Masao Doi and Samuel~F. Edwards.
+\newblock {\em The Theory of Polymer Dynamics}.
+\newblock Oxford University Press, Oxford, 1986.
+
+\bibitem{Giordano}
+Nicholas~J. Giordano.
+\newblock {\em Computational Physics}.
+\newblock Prentice Hall, Upper Saddle River, NJ, 2006.
+
+\bibitem{Landau}
+Rubin~H. Landau, Manuel~J. P{\'a}ez, and Cristian~C. Bordeianu.
+\newblock {\em Computational Physics: Problem Solving with Python}.
+\newblock Wiley-VCH, Weinheim, 2015.
+
+\bibitem{Manca}
+Fabio Manca, Stefano Giordano, P.~L. Palla, Fabrizio Cleri, and Luciano Colombo.
+\newblock Monte carlo simulations of single polymer force-extension relations.
+\newblock In {\em Journal of Physics: Conference Series}, volume 383, page 012016. IOP Publishing, 2012.
+
+\bibitem{Rubinstein}
+Michael Rubinstein and Ralph~H. Colby.
+\newblock {\em Polymer Physics}.
+\newblock Oxford University Press, Oxford, 2003.
+
+\end{thebibliography}

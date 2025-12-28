@@ -20,7 +20,7 @@
 \usepackage{droidsans}
 \usepackage{charter}
 \usepackage[T1]{fontenc}
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{setspace}
 \usepackage[compact]{titlesec}
 \usepackage{hyperref}
@@ -28,7 +28,7 @@
 \usepackage{tikz}
 %%%Please don't disable any packages in the preamble, as this may cause the template to display incorrectly.%%%
 
-\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment out if not required.
+%\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment out if not required.
 
 \definecolor{cream}{RGB}{222,217,201}
 
@@ -109,7 +109,7 @@
 		\begin{center}
 			\noindent\LARGE{\textbf{Numerical Simulations of Ideal Chain Model of Polymer\\using the Freely Jointed Chain (FJC)}}\\
 			\vspace{.5cm}
-			\noindent\large{Author  first \& last name} \\
+			\noindent\large{Andres Alvarez \& Diego Guerrero} \\
 		\end{center}	
 	\end{@twocolumnfalse} \vspace{0.6cm}
 	
@@ -132,7 +132,14 @@
 		\item Presentation of measure of extent (metrics). Relationship with experimental measurement.
 		\item Goal of the practical work
 	\end{itemize}
-	
+Polymer physics deals with complex substances through a simple approach. Understanding the properties of polymers from a molecular point of view is key to unveil their complexity.
+
+Given an ensamble of polymers, we can use tools from statistics to derive some properties that apply to the ensamble at any given instant. To do so we model each polymer as a (continuous or discrete) ideal chain of monomers along with some constraints. Some examples of these models include the Freely Jointed Chain, the Freely Rotating Chain, the wormlike chain, the hindered rotating chain, the rotational isometric state model, among others.
+
+
+The first, most straightforward (yet illustrating)  approach is the Freely Jointed Chain model. The FJC is a chain consisting of \(N\) links, each of length \(b\) and able to point in any direction independently of each other (thus the simplicity).
+
+
 	\section{Methods}
 	
 	\begin{itemize}
@@ -171,14 +178,15 @@
 		\item Summary of the main results
 		\item Perspectives
 	\end{itemize}
-	
-	\section{References}
-	
-	From 5 to 10 references maximum.
-	Books or research paper, no website here.
+  \nocite{*}
+\section{References}
+\renewcommand{\refname}{}
+\vspace{-7mm}
+\bibliography{cite}
+\bibliographystyle{plain}
 	
 	%%%FOOTNOTES%%%
 	
-	\footnotetext{Dr. Adrien NICOLAÏ \& Pr. Patrick SENET}
+\footnotetext{Dr. Adrien NICOLAÏ \& Pr. Patrick SENET}
 	
 \end{document}
