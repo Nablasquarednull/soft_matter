@@ -134,7 +134,7 @@
 	\end{itemize}
 Polymer physics deals with complex substances through a simple approach. Understanding the properties of polymers from a molecular point of view is key to unveil their complexity.
 
-Given an ensamble of polymers, we can use tools from statistics to derive some properties that apply to the ensamble at any given instant. To do so we model each polymer as a (continuous or discrete) ideal chain of monomers along with some constraints. Some examples of these models include the Freely Jointed Chain, the Freely Rotating Chain, the wormlike chain, the hindered rotating chain, the rotational isometric state model, among others.
+Given an ensamble of polymers, we can use tools from statistics to derive some properties that apply to the ensamble at any given instant. To do so we model each polymer as a (continuous or discrete) ideal chain of monomers along with some constraints. Some examples of these models include the Freely Jointed Chain, the Freely Rotating Chain, the wormlike chain, the hindered rotating chain, the rotational isometric state model, among others \cite{Rubinstein}.
 
 
 The first, most straightforward (yet illustrating)  approach is the Freely Jointed Chain model. The FJC is a chain consisting of \(N\) links, each of length \(b\) and able to point in any direction independently of each other (thus the simplicity).
@@ -148,8 +148,12 @@ The first, most straightforward (yet illustrating)  approach is the Freely Joint
 		\item Time series + mean square and distributions statistical tools (theory) + Monte-Carlo
 		\item Summary of data produced (ex: Table)
 	\end{itemize}
+
+  The first script analyzes the simulation data of a \(3D\) FJC polymer for different chain lenghts \(N\). 
+  The parameters are the bond length \(b\), the \(N\) values we wish to test for, and the number of configurations \(T\) we wish to analyze.
+  An XYZ file containing T polymer configurations is read, and for every configuration the end-to-end distance \(Q\) and the radius of gyration \(R_{g}\) is computed. Finally both quantities are squared and averaged over all configurations yielding \(\langle Q^2\rangle$ and $\langle R_g^2\rangle\). This algorithm is looped over for every \(N\). Results are shown in figure \ref{fig:scaled}.
 	
-	\begin{figure}[h!]
+	\begin{figure}[ht]
 		\label{figure1}
 		\begin{minipage}{.45\linewidth}
 			\centering
@@ -170,7 +174,30 @@ The first, most straightforward (yet illustrating)  approach is the Freely Joint
 		\item Comparison with theoretical results (qualitatively and quantitatively)
 		\item Discussion
 	\end{itemize}
+	\begin{figure}[ht]
+		\label{figure1}
+		\begin{minipage}{.45\linewidth}
+			\centering
+			\includegraphics[height=4cm]{../code/Q2_vs_N_theory.pdf}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.45\linewidth}
+			\centering
+			\includegraphics[height=4cm]{../code/Rg2_vs_N_theory.pdf}
+		\end{minipage}		
+		\caption{$\langle Q^{2}\rangle$ (left) and $\langle R_{g}^{2}\rangle$ (right)}
+	\end{figure}
 
+  \begin{figure}[H]
+      \label{fig:histogram}
+      \begin{minipage}{0.95\linewidth}
+      \centering
+      \includegraphics[height=4cm]{../code/Histogram_Q.pdf}
+      \end{minipage}
+      \caption{Probability distribution}
+  \end{figure}
+  
+	
 	\section{Conclusion}
 	
 	\begin{itemize}

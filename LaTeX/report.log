@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/nixos.org) (preloaded format=pdflatex 1980.1.1)  28 DEC 2025 12:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/nixos.org) (preloaded format=pdflatex 1980.1.1)  30 DEC 2025 14:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -658,7 +658,11 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count334
  (/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (./report.aux)
+))) (./report.aux
+
+LaTeX Warning: Label `figure1' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -753,35 +757,38 @@ LaTeX Font Info:    Trying to load font information for TS1+bch on input line 13
  (/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/psnfss/ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 140.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 137.
  (/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 140.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 137.
  (/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 140.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 137.
  (/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 140.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 137.
  (/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 140.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 137.
  (/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 140.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 140.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 140.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
 
 
-LaTeX Warning: File `img1.jpg' not found on input line 156.
+LaTeX Warning: Reference `fig:scaled' on page 1 undefined on input line 154.
+
+
+LaTeX Warning: File `img1.jpg' not found on input line 160.
 
 
 ! Package pdftex.def Error: File `img1.jpg' not found: using draft setting.
@@ -790,17 +797,17 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.156 			\includegraphics[height=4cm]{img1.jpg}
+l.160 			\includegraphics[height=4cm]{img1.jpg}
                                                
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 156.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 160.
 (/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 
-LaTeX Warning: File `img2.jpg' not found on input line 161.
+LaTeX Warning: File `img2.jpg' not found on input line 165.
 
 
 ! Package pdftex.def Error: File `img2.jpg' not found: using draft setting.
@@ -809,25 +816,56 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.161 			\includegraphics[height=4cm]{img2.jpg}
+l.165 			\includegraphics[height=4cm]{img2.jpg}
                                                
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 163.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 167.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 163.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 167.
+<../code/Q2_vs_N_theory.pdf, id=28, 225.84375pt x 208.78pt>
+File: ../code/Q2_vs_N_theory.pdf Graphic file (type pdf)
+<use ../code/Q2_vs_N_theory.pdf>
+Package pdftex.def Info: ../code/Q2_vs_N_theory.pdf  used on input line 181.
+(pdftex.def)             Requested size: 123.11513pt x 113.81102pt.
+
+Overfull \hbox (8.26636pt too wide) in paragraph at lines 181--182
+ [][] 
+ []
+
+<../code/Rg2_vs_N_theory.pdf, id=29, 228.855pt x 207.77625pt>
+File: ../code/Rg2_vs_N_theory.pdf Graphic file (type pdf)
+<use ../code/Rg2_vs_N_theory.pdf>
+Package pdftex.def Info: ../code/Rg2_vs_N_theory.pdf  used on input line 186.
+(pdftex.def)             Requested size: 125.3573pt x 113.81102pt.
+
+Overfull \hbox (10.50853pt too wide) in paragraph at lines 186--187
+ [][] 
+ []
+
+<../code/Histogram_Q.pdf, id=30, 552.0625pt x 360.34625pt>
+File: ../code/Histogram_Q.pdf Graphic file (type pdf)
+<use ../code/Histogram_Q.pdf>
+Package pdftex.def Info: ../code/Histogram_Q.pdf  used on input line 195.
+(pdftex.def)             Requested size: 174.35548pt x 113.81102pt.
 
 
-(./report.bbl)
-
-Package hyperref Warning: Ignoring empty anchor on input line 190.
-
-
+(./report.bbl
 
 [1{/nix/store/kwv3q6nxxb3rgyml0nal2q4ln0hnpfhr-texlive-2024-env/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/enc/dvips/base/8r.enc}
 
+
+ <../code/Q2_vs_N_theory.pdf> <../code/Rg2_vs_N_theory.pdf> <../code/Histogram_Q.pdf>])
+
+Package hyperref Warning: Ignoring empty anchor on input line 217.
+
+
+
+
+
+[2
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -838,24 +876,27 @@ L3 programming layer <2025-01-18>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: EA46B8C858990ADAB22B633A1CF4E6BE;526.
  ) 
 Here is how much of TeX's memory you used:
- 25945 strings out of 473203
- 498937 string characters out of 5692202
- 905633 words of memory out of 5000000
- 48693 multiletter control sequences out of 15000+600000
- 608920 words of font info for 99 fonts, out of 8000000 for 9000
+ 25993 strings out of 473203
+ 499883 string characters out of 5692202
+ 908774 words of memory out of 5000000
+ 48718 multiletter control sequences out of 15000+600000
+ 621723 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,87p,476b,501s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/bitstrea/charter/bchb8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/bitstrea/charter/bchr8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/bitstrea/charter/bchri8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr10.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/courier/ucrr8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/helvetic/uhvb8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/helvetic/uhvr8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/times/utmr8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (1 page, 98039 bytes).
+ 84i,11n,87p,555b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/bitstrea/charter/bchb8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/bitstrea/charter/bchr8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/bitstrea/charter/bchri8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/public/amsfonts/cm/cmr10.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/courier/ucrr8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/helvetic/uhvb8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/helvetic/uhvr8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/times/utmr8a.pfb></nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (2 pages, 224279 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 16 named destinations out of 1000 (max. 500000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
