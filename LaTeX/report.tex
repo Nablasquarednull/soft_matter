@@ -151,8 +151,27 @@ The first, most straightforward (yet illustrating)  approach is the Freely Joint
 
   The first script analyzes the simulation data of a \(3D\) FJC polymer for different chain lenghts \(N\). 
   The parameters are the bond length \(b\), the \(N\) values we wish to test for, and the number of configurations \(T\) we wish to analyze.
-  An XYZ file containing T polymer configurations is read, and for every configuration the end-to-end distance \(Q\) and the radius of gyration \(R_{g}\) is computed. Finally both quantities are squared and averaged over all configurations yielding \(\langle Q^2\rangle$ and $\langle R_g^2\rangle\). This algorithm is looped over for every \(N\). Results are shown in figure \ref{fig:scaled}.
-	
+  An XYZ file containing T polymer configurations is read, and for every configuration the end-to-end distance \(Q\) and the radius of gyration \(R_{g}\) is computed. Finally both quantities are squared and averaged over all configurations yielding \(\langle Q^2\rangle$ and $\langle R_g^2\rangle\). This algorithm is looped over for every \(N\).	
+
+
+The second script is built over the first one. The only extra parameter needed are the number of bins for the histogram. After computing the end-to-end distance \(Q\), the algorithm builds a histogram out of these values, treating them as samples from a probability distribution. The histogram is then normalized so that it can be directly compared to the gaussian distribution.
+
+
+The third simulation focuses on computing the structure factor for a polymer of \texttt{N = 100} and \texttt{b = 3}. An array \(k\) is introduced, spanning values from 0 to 1 (in our case, sampling every 0.01 steps). One of the files containing the simulated polymers is held in memory. Then, we use the formula  
+
+\begin{equation}
+I(k) = \sum_{i=0}^{N} \sum_{j=0}^{N}
+\left\langle
+\frac{\sin\!\left(k\,|\mathbf{R}_i - \mathbf{R}_j|\right)}
+     {k\,|\mathbf{R}_i - \mathbf{R}_j|}
+\right\rangle
+\end{equation}
+where \(\mathbf{R}_{i}\),\(\mathbf{R}_{i}\) are coordinates of the monomers in 3D space obtained from the simulated polymer.
+
+Then, the Guinier approximation is computed on the same \(k\) array to compare them side by side.
+
+
+
 	\begin{figure}[ht]
 		\label{figure1}
 		\begin{minipage}{.45\linewidth}
@@ -175,7 +194,6 @@ The first, most straightforward (yet illustrating)  approach is the Freely Joint
 		\item Discussion
 	\end{itemize}
 	\begin{figure}[ht]
-		\label{figure1}
 		\begin{minipage}{.45\linewidth}
 			\centering
 			\includegraphics[height=4cm]{../code/Q2_vs_N_theory.pdf}
@@ -195,6 +213,22 @@ The first, most straightforward (yet illustrating)  approach is the Freely Joint
       \includegraphics[height=4cm]{../code/Histogram_Q.pdf}
       \end{minipage}
       \caption{Probability distribution}
+  \end{figure}
+   \begin{figure}[H]
+      \label{fig:structure}
+      \begin{minipage}{0.95\linewidth}
+      \centering
+      \includegraphics[height=4cm]{../code/structure_factor.png}
+      \end{minipage}
+      \caption{Structure factor (simulated)}
+  \end{figure}
+   \begin{figure}[H]
+      \label{fig:comparison}
+      \begin{minipage}{0.95\linewidth}
+      \centering
+      \includegraphics[height=4cm]{../code/Guinier_approx.png}
+      \end{minipage}
+      \caption{Structure factor comparison (simulation and Guinier approximation)}
   \end{figure}
   
 	
