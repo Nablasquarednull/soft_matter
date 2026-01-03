@@ -26,6 +26,8 @@
 \usepackage{hyperref}
 \usepackage{multirow}
 \usepackage{tikz}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 %%%Please don't disable any packages in the preamble, as this may cause the template to display incorrectly.%%%
 
 %\usepackage{epstopdf}%This line makes .eps figures into .pdf - please comment out if not required.
@@ -170,9 +172,49 @@ where \(\mathbf{R}_{i}\),\(\mathbf{R}_{i}\) are coordinates of the monomers in 3
 
 Then, the Guinier approximation is computed on the same \(k\) array to compare them side by side.
 
+\subsection{Polimer Extension}
+A considerable ammount of attention has been driven toward the physical manipulation of polymers that are not large to be on termodynamic equilibrium, the extension of a polymer by the stretching of a canteliver is a recurrent example \cite{Manca2012} in this regard, an expression for the force - extension relationship has been found by \cite{extensionRef}.  
+
+\begin{equation}
+  | \vec{Q} \cdot \vec{u}_x | = N b \left[ \coth{\alpha} - \frac{1}{\alpha}\right];
+  \\
+  \alpha = \frac{Fb}{K_B T}
+  \label{eq:force-ext}
+\end{equation}
+
+In order to test this analytical formula with experimental data, a simulation was performed, where one polymer of 100 monomers was exposed to a range of constant forces from 0 to 10 pN. The polymer is modeled as a chain of fixed-length bonds, and its configuration is updated by randomly perturbing individual bond orientations.
+
+Each trial move changes the end-to-end vector and the associated potential energy due to the applied force. The acceptance of these moves follows a Boltzmann-like (Metropolis) criterion, which ensures that configurations are sampled according to thermal equilibrium at temperature 
+T
+T. This energy-based acceptance allows the algorithm to capture thermal fluctuations and generate physically meaningful polymer conformations under force. For the details of the algorithm look to Algorithm 1.
+
+\begin{algorithm}[H]
+\caption{Monte Carlo Polymer Extension Under Force}
+\begin{algorithmic}[1]
+\State Initialize $N$ bond vectors uniformly on the unit sphere, scaled by bond length $b$
+\State Compute monomer positions and end-to-end vector $\mathbf{Q}$
+\State Set external force $\mathbf{F} = (F_x,0,0)$ and energy $U = -\mathbf{F}\cdot\mathbf{Q}$
+
+\For{$\text{step} = 1$ to $n_{\text{steps}}$}
+    \State Randomly select bond index $i$
+    \State Propose new bond direction $\hat{u}$ and bond $\mathbf{b}_i' = b\hat{u}$
+    \State Compute proposed $\mathbf{Q}'$ and $U'$
+    \State $\Delta U \gets U' - U$
+    \If{$\Delta U < 0$ \textbf{or} $\mathrm{rand} < e^{-\Delta U/k_BT}$}
+        \State Accept move: update bonds, $\mathbf{Q} \gets \mathbf{Q}'$, $U \gets U'$
+        \State Recompute monomer positions
+    \EndIf
+    \State Store $\mathbf{Q}$ and $U$
+    \If{$\text{step} \bmod n_{\text{skip}} = 0$}
+        \State Save polymer configuration to file
+    \EndIf
+\EndFor
+\State Combine saved frames into a trajectory file
+\end{algorithmic}
+\end{algorithm}
 
 
-	\begin{figure}[ht]
+\begin{figure}[ht]
 		\label{figure1}
 		\begin{minipage}{.45\linewidth}
 			\centering
@@ -231,7 +273,19 @@ Then, the Guinier approximation is computed on the same \(k\) array to compare t
       \caption{Structure factor comparison (simulation and Guinier approximation)}
   \end{figure}
 
-  \begin{figure}
+\begin{figure}[htbp]
+    \centering
+
+    \fbox{\includegraphics[width=\linewidth]{figures/step_1.png}}\par\vspace{0.5em}
+    \fbox{\includegraphics[width=\linewidth]{figures/step_4.png}}\par\vspace{0.5em}
+    \fbox{\includegraphics[width=\linewidth]{figures/step_60.png}}\par\vspace{0.5em}
+    \fbox{\includegraphics[width=\linewidth]{figures/step_99.png}}
+
+    \caption{Extension of the polymer using Monte-Carlo simulation}
+    \label{fig:four-vertical-images}
+\end{figure}
+  
+   \begin{figure}
     \begin{center}
       \includegraphics[width=0.45\textwidth]{figures/Q_x_step.pdf}
     \end{center}
