@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  2 JAN 2026 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  3 JAN 2026 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -839,44 +839,74 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (./report.aux)
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks43
+\c@algorithm=\count335
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count336
+\c@ALG@rem=\count337
+\c@ALG@nested=\count338
+\ALG@tlm=\skip90
+\ALG@thistlm=\skip91
+\c@ALG@Lnr=\count339
+\c@ALG@blocknr=\count340
+\c@ALG@storecount=\count341
+\c@ALG@tmpcounter=\count342
+\ALG@tmplength=\skip92
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
-Package chemgreek Info: Activating mapping `default' on line 35.
+Package chemgreek Info: Activating mapping `default' on line 37.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count335
+\scratchcounter=\count343
 \scratchdimen=\dimen295
 \scratchbox=\box71
-\nofMPsegments=\count336
-\nofMParguments=\count337
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count338
+\nofMPsegments=\count344
+\nofMParguments=\count345
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count346
 \MPscratchDim=\dimen296
-\MPnumerator=\count339
-\makeMPintoPDFobject=\count340
-\everyMPtoPDFconversion=\toks44
+\MPnumerator=\count347
+\makeMPintoPDFobject=\count348
+\everyMPtoPDFconversion=\toks45
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -924,69 +954,89 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 37.
 (./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
-\figrulesep=\skip90
+\figrulesep=\skip93
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 12
-2.
+4.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Trying to load font information for TS1+bch on input line 1
-30.
+32.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 137.
+ 139.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 137.
+ 139.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 137.
+ 139.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 137.
+ 139.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-37.
+39.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 139.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 139.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 139.
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 16
-0.
+2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 
 
-LaTeX Warning: File `img1.jpg' not found on input line 179.
+Package natbib Warning: Citation `Manca2012' on page 1 undefined on input line 
+176.
+
+
+Package natbib Warning: Citation `extensionRef' on page 1 undefined on input li
+ne 176.
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 192.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
+
+
+]
+
+LaTeX Warning: File `img1.jpg' not found on input line 221.
 
 
 ! Package pdftex.def Error: File `img1.jpg' not found: using draft setting.
@@ -995,11 +1045,11 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.179 			\includegraphics[height=4cm]{img1.jpg}
+l.221 			\includegraphics[height=4cm]{img1.jpg}
                                                
 ? 
 
-LaTeX Warning: File `img2.jpg' not found on input line 184.
+LaTeX Warning: File `img2.jpg' not found on input line 226.
 
 
 ! Package pdftex.def Error: File `img2.jpg' not found: using draft setting.
@@ -1008,124 +1058,122 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.184 			\includegraphics[height=4cm]{img2.jpg}
+l.226 			\includegraphics[height=4cm]{img2.jpg}
                                                
 ? 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 186.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 186.
-<../code/Q2_vs_N_theory.pdf, id=28, 225.84375pt x 208.78pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
+<../code/Q2_vs_N_theory.pdf, id=53, 225.84375pt x 208.78pt>
 File: ../code/Q2_vs_N_theory.pdf Graphic file (type pdf)
 <use ../code/Q2_vs_N_theory.pdf>
-Package pdftex.def Info: ../code/Q2_vs_N_theory.pdf  used on input line 199.
+Package pdftex.def Info: ../code/Q2_vs_N_theory.pdf  used on input line 241.
 (pdftex.def)             Requested size: 123.11513pt x 113.81102pt.
 
-Overfull \hbox (8.26636pt too wide) in paragraph at lines 199--200
+Overfull \hbox (8.26636pt too wide) in paragraph at lines 241--242
  [][] 
  []
 
-<../code/Rg2_vs_N_theory.pdf, id=29, 228.855pt x 207.77625pt>
+<../code/Rg2_vs_N_theory.pdf, id=54, 228.855pt x 207.77625pt>
 File: ../code/Rg2_vs_N_theory.pdf Graphic file (type pdf)
 <use ../code/Rg2_vs_N_theory.pdf>
-Package pdftex.def Info: ../code/Rg2_vs_N_theory.pdf  used on input line 204.
+Package pdftex.def Info: ../code/Rg2_vs_N_theory.pdf  used on input line 246.
 (pdftex.def)             Requested size: 125.3573pt x 113.81102pt.
 
-Overfull \hbox (10.50853pt too wide) in paragraph at lines 204--205
+Overfull \hbox (10.50853pt too wide) in paragraph at lines 246--247
  [][] 
  []
 
-<../code/Histogram_Q.pdf, id=30, 552.0625pt x 360.34625pt>
+<../code/Histogram_Q.pdf, id=55, 552.0625pt x 360.34625pt>
 File: ../code/Histogram_Q.pdf Graphic file (type pdf)
 <use ../code/Histogram_Q.pdf>
-Package pdftex.def Info: ../code/Histogram_Q.pdf  used on input line 213.
+Package pdftex.def Info: ../code/Histogram_Q.pdf  used on input line 255.
 (pdftex.def)             Requested size: 174.35548pt x 113.81102pt.
-<../code/structure_factor.png, id=31, 462.528pt x 346.896pt>
+<../code/structure_factor.png, id=56, 462.528pt x 346.896pt>
 File: ../code/structure_factor.png Graphic file (type png)
 <use ../code/structure_factor.png>
-Package pdftex.def Info: ../code/structure_factor.png  used on input line 221.
+Package pdftex.def Info: ../code/structure_factor.png  used on input line 263.
 (pdftex.def)             Requested size: 151.74544pt x 113.81102pt.
 
-Underfull \vbox (badness 1668) has occurred while \output is active []
 
-
-
-[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
-ocal/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
-
-
- <../code/Q2_vs_N_theory.pdf> <../code/Rg2_vs_N_theory.pdf>]
-<../code/Guinier_approx.png, id=91, 462.528pt x 346.896pt>
+<../code/Guinier_approx.png, id=58, 462.528pt x 346.896pt>
 File: ../code/Guinier_approx.png Graphic file (type png)
 <use ../code/Guinier_approx.png>
-Package pdftex.def Info: ../code/Guinier_approx.png  used on input line 229.
+Package pdftex.def Info: ../code/Guinier_approx.png  used on input line 271.
 (pdftex.def)             Requested size: 151.74544pt x 113.81102pt.
-<figures/step_1.png, id=92, 1028.84375pt x 430.60875pt>
+<figures/step_1.png, id=59, 1028.84375pt x 430.60875pt>
 File: figures/step_1.png Graphic file (type png)
 <use figures/step_1.png>
-Package pdftex.def Info: figures/step_1.png  used on input line 237.
+Package pdftex.def Info: figures/step_1.png  used on input line 279.
 (pdftex.def)             Requested size: 255.22124pt x 106.81746pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 237--237
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 279--279
  [][] 
  []
 
-<figures/step_4.png, id=93, 1028.84375pt x 430.60875pt>
+<figures/step_4.png, id=60, 1028.84375pt x 430.60875pt>
 File: figures/step_4.png Graphic file (type png)
 <use figures/step_4.png>
-Package pdftex.def Info: figures/step_4.png  used on input line 238.
+Package pdftex.def Info: figures/step_4.png  used on input line 280.
 (pdftex.def)             Requested size: 255.22124pt x 106.81746pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 238--238
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 280--280
  [][] 
  []
 
-<figures/step_60.png, id=94, 1028.84375pt x 430.60875pt>
+<figures/step_60.png, id=61, 1028.84375pt x 430.60875pt>
 File: figures/step_60.png Graphic file (type png)
 <use figures/step_60.png>
-Package pdftex.def Info: figures/step_60.png  used on input line 239.
+Package pdftex.def Info: figures/step_60.png  used on input line 281.
 (pdftex.def)             Requested size: 255.22124pt x 106.81746pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 239--239
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 281--281
  [][] 
  []
 
-<figures/step_99.png, id=95, 1028.84375pt x 430.60875pt>
+<figures/step_99.png, id=62, 1028.84375pt x 430.60875pt>
 File: figures/step_99.png Graphic file (type png)
 <use figures/step_99.png>
-Package pdftex.def Info: figures/step_99.png  used on input line 240.
+Package pdftex.def Info: figures/step_99.png  used on input line 282.
 (pdftex.def)             Requested size: 255.22124pt x 106.81746pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 240--241
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 282--283
  [][] 
  []
 
-<figures/Q_x_step.pdf, id=96, 400.49625pt x 268.00125pt>
+<figures/Q_x_step.pdf, id=63, 400.49625pt x 268.00125pt>
 File: figures/Q_x_step.pdf Graphic file (type pdf)
 <use figures/Q_x_step.pdf>
-Package pdftex.def Info: figures/Q_x_step.pdf  used on input line 248.
+Package pdftex.def Info: figures/Q_x_step.pdf  used on input line 290.
 (pdftex.def)             Requested size: 238.01991pt x 159.28073pt.
-<figures/extension.pdf, id=97, 390.45876pt x 275.0275pt>
+<figures/extension.pdf, id=64, 390.45876pt x 275.0275pt>
 File: figures/extension.pdf Graphic file (type pdf)
 <use figures/extension.pdf>
-Package pdftex.def Info: figures/extension.pdf  used on input line 255.
+Package pdftex.def Info: figures/extension.pdf  used on input line 297.
 (pdftex.def)             Requested size: 238.01991pt x 167.65321pt.
 (./report.bbl
 
-
-
-[2 <../code/Histogram_Q.pdf> <../code/structure_factor.png> <../code/Guinier_ap
-prox.png> <./figures/step_1.png> <./figures/step_4.png> <./figures/step_60.png>
- <./figures/step_99.png>]
-
-)
-
-Package hyperref Warning: Ignoring empty anchor on input line 278.
+[2 <../code/Q2_vs_N_theory.pdf> <../code/Rg2_vs_N_theory.pdf> <../code/Histogra
+m_Q.pdf> <../code/structure_factor.png> <../code/Guinier_approx.png>]
 
 
 
-[3 <./figures/Q_x_step.pdf> <./figures/extension.pdf>]
+[3 <./figures/step_1.png> <./figures/step_4.png> <./figures/step_60.png> <./fig
+ures/step_99.png> <./figures/Q_x_step.pdf> <./figures/extension.pdf>])
 
+Package hyperref Warning: Ignoring empty anchor on input line 320.
+
+
+Package natbib Warning: There were undefined citations.
+
+
+
+
+
+[4
+
+] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./report.aux)
  ***********
@@ -1137,16 +1185,16 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: EA46B8C858990ADAB22B633A1CF4E6BE;526.
+(rerunfilecheck)             Checksum: 520CF801B807B2A166CB2CF809714F20;671.
  ) 
 Here is how much of TeX's memory you used:
- 26059 strings out of 473190
- 487503 string characters out of 5715801
- 910130 words of memory out of 5000000
- 48781 multiletter control sequences out of 15000+600000
- 620501 words of font info for 122 fonts, out of 8000000 for 9000
+ 26715 strings out of 473190
+ 497839 string characters out of 5715801
+ 923160 words of memory out of 5000000
+ 49412 multiletter control sequences out of 15000+600000
+ 632521 words of font info for 133 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,87p,555b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,87p,555b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><
 /usr/local/texlive/2025/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></us
 r/local/texlive/2025/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/
@@ -1158,13 +1206,13 @@ l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /2025/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2025/t
 exmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2025/texmf-di
 st/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2025/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/ti
-mes/utmr8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on report.pdf (3 pages, 690013 bytes).
+pe1/urw/symbol/usyr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/tim
+es/utmb8a.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (4 pages, 708227 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
