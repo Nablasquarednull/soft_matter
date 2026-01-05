@@ -20,6 +20,10 @@ n_forces = length(Fx_values);
 Qx_avg = zeros(n_forces, 1);
 Qx_std = zeros(n_forces, 1);
 
+% Stats
+p_values = zeros(n_forces,1);
+accept_H0 = false(n_forces,1);
+
 % MAIN LOOP OVER FORCES
 for f_idx = 1:n_forces
     Fx = Fx_values(f_idx);
@@ -48,13 +52,14 @@ for f_idx = 1:n_forces
     fprintf('Average Qx = %.2f ± %.2f nm\n', Qx_avg(f_idx), Qx_std(f_idx));
 end
 
+
+
 %% Plot force vs extension
 figure;
 %errorbar(Fx_values, Qx_avg, Qx_std, 'bo-', 'LineWidth', 1.5, 'MarkerSize', 8);
 plot(Qx_avg ./ (N * b), Fx_values, 'b*',  'MarkerSize', 8)
 ylabel('Force F (pN)');
 xlabel('Extension ⟨Q_x⟩ (nm)');
-title('Force-Extension Curve: FJC Polymer');
 grid on;
 
 %% Compare with theory
@@ -83,6 +88,24 @@ legend('Simulation', ' | < Q , u_x > |', 'Location', 'SouthEast');
 ylabel('Q_x');
 xlabel('Steps');
 
+%% RMSE vs theory (global test)
+
+alpha = Fx_values * b / kbT;
+
+Qx_theory = zeros(size(Fx_values));
+for i = 1:length(Fx_values)
+    if alpha(i) == 0
+        Qx_theory(i) = 0;
+    else
+        Qx_theory(i) = N*b*(coth(alpha(i)) - 1/alpha(i));
+    end
+end
+
+RMSE = sqrt(mean((Qx_avg - Qx_theory').^2));
+
+fprintf('\n=== Global RMSE test ===\n');
+fprintf('RMSE = %.4f nm\n', RMSE);
+fprintf('RMSE / (Nb) = %.4e\n', RMSE/(N*b));
 
 
 

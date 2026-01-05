@@ -112,7 +112,7 @@
 			\noindent\LARGE{\textbf{Numerical Simulations of Ideal Chain Model of Polymer\\using the Freely Jointed Chain (FJC)}}\\
 			\vspace{.5cm}
 			\noindent\large{Andres Alvarez \& Diego Guerrero} \\
-		\end{center}	
+		\end{center}\\	
 	\end{@twocolumnfalse} \vspace{0.6cm}
 	
 	]
@@ -141,7 +141,6 @@ Given an ensamble of polymers, we can use tools from statistics to derive some p
 
 The first, most straightforward (yet illustrating)  approach is the Freely Jointed Chain model. The FJC is a chain consisting of \(N\) links, each of length \(b\) and able to point in any direction independently of each other (thus the simplicity).
 
-
 To characterize the spatial extent of the polymers, two standard measures of extent are introduced: the end-to-end vector $\mathbf{Q}$ and the radius of gyration $R_g$. The end-to-end vector is defined as $\mathbf{Q} = \mathbf{r}_N - \mathbf{r}_0$, and provides a direct measure of the global elongation of a polymer chain.The statistical quantity derived from it, $\langle Q^2 \rangle$, is directly related to experimental observables obtained from single-molecule techniques, including force--extension measurements using optical tweezers, as well as from scattering experiments through their connection to the structure factor. 
 
 The radius of gyration $R_g$ quantifies the spatial distribution of monomers around the center of mass of the chain and is defined as the mean squared distance of the monomers from this center. It provides a global measure of the polymer size and compactness that is less sensitive to instantaneous end-to-end fluctuations than $\mathbf{Q}$. Experimentally, $R_g$ is commonly accessed via small-angle neutron or X-ray scattering (SANS/SAXS), where it determines the low-$k$ behavior of the scattering intensity. Taken together, $\mathbf{Q}$ and $R_g$ offer complementary descriptions of polymer extent, allowing for a consistent comparison between numerical simulations and experimental measurements.
@@ -157,6 +156,7 @@ The goal of this practical work is to analyze the conformational statistics of a
 	\end{itemize}
 \subsection{Analysis of FJC polymer configurations}
 \label{subsec:analysisFJC}
+
 
 
   The first script analyzes the simulation data of a \(3D\) FJC polymer for different chain lenghts \(N\). 
@@ -254,6 +254,7 @@ Then, the Guinier approximation is computed on the same \(k\) array to compare t
 \State Compare numerical structure factor with the Guinier approximation in the low-$k$ regime
 \end{algorithmic}
 \end{algorithm}
+ 
 \subsection{Polimer Extension}
 A considerable ammount of attention has been driven toward the physical manipulation of polymers that are not large to be on termodynamic equilibrium, the extension of a polymer by the stretching of a canteliver is a recurrent example \cite{Manca2012} in this regard, an expression for the force - extension relationship has been found by \cite{extensionRef}.  
 
@@ -264,11 +265,11 @@ A considerable ammount of attention has been driven toward the physical manipula
   \label{eq:force-ext}
 \end{equation}
 
-In order to test this analytical formula with experimental data, a simulation was performed, where one polymer of 100 monomers was exposed to a range of constant forces from 0 to 10 pN. The polymer is modeled as a chain of fixed-length bonds, and its configuration is updated by randomly perturbing individual bond orientations.
+In order to test this analytical formula with experimental data, a simulation was performed, where one polymer of 100 monomers was exposed to a range of constant forces from 0 to 10 pN. The polymer is modeled as a chain of fixed-length bonds, and its configuration is updated by randomly perturbing individual bond orientations. 
 
 Each trial move changes the end-to-end vector and the associated potential energy due to the applied force. The acceptance of these moves follows a Boltzmann-like (Metropolis) criterion, which ensures that configurations are sampled according to thermal equilibrium at temperature 
 T
-T. This energy-based acceptance allows the algorithm to capture thermal fluctuations and generate physically meaningful polymer conformations under force. For the details of the algorithm look to Algorithm 1.
+T. This energy-based acceptance allows the algorithm to capture thermal fluctuations and generate physically meaningful polymer conformations under force. For the details of the algorithm look to Algorithm 1. 
 
 \begin{algorithm}[H]
 \caption{Monte Carlo Polymer Extension Under Force}
@@ -300,17 +301,36 @@ T. This energy-based acceptance allows the algorithm to capture thermal fluctuat
 		\label{figure1}
 		\begin{minipage}{.45\linewidth}
 			\centering
-			\includegraphics[height=4cm]{img1.jpg}
+			\includegraphics[height=4cm]{figures/fig_1.png}
 		\end{minipage}
 		\hfill
 		\begin{minipage}{.45\linewidth}
 			\centering
-			\includegraphics[height=4cm]{img2.jpg}
+			\includegraphics[height=4cm]{figures/fig_2.png}
 		\end{minipage}		
 		\caption{Two polymer structures generated from FJC model simulations for $N=100$ and $b=3.0$.}
 	\end{figure}
 	
 	\section{Results and Discussion}
+
+ \subsection{Polymer Extension}
+
+ The Monte-Carlo simulation showed a good agreement with the theoretical results. The convergence of the extension, through the random iterations, is appreciable in figure \ref{fig:ex4_1}, the extension reaches the theoretical value near the step 2000. On the other hand, on \ref{fig:ex4_2} two curves are plotted, one is the curve for the relation of the force applied to the monomer to the mean value of the extension, is qualitatively appreciable that both curves touch and differ only by small values. 
+
+  The agreement between the Monte Carlo simulation and the analytical Freely--Jointed Chain (FJC) force--extension relation was quantified using the root--mean--square error (RMSE),
+  \begin{equation}
+  \mathrm{RMSE} = \sqrt{\frac{1}{N_f}\sum_{i=1}^{N_f}
+  \left(Q_x^{\mathrm{MC}}(F_i) - Q_x^{\mathrm{FJC}}(F_i)\right)^2},
+  \end{equation}
+  where $Q_x^{\mathrm{MC}}$ denotes the Monte Carlo estimate of the mean end--to--end extension along the force direction, $Q_x^{\mathrm{FJC}}$ is the theoretical prediction, and $N_f$ is the number of force values considered.
+
+  For forces in the range $0$--$10~\mathrm{pN}$, the RMSE was found to be
+  \[
+  \mathrm{RMSE} = 2.19~\mathrm{nm},
+  \qquad
+  \frac{\mathrm{RMSE}}{Nb} = 2.2\times10^{-2},
+  \]
+  corresponding to an average deviation of approximately $2\%$ of the polymer contour length. This result indicates strong quantitative agreement between the Monte Carlo simulation and the FJC theoretical prediction, with deviations attributable to finite chain length and thermal fluctuations.
 
 	\begin{itemize}
 		\item Description of the numerical results (Parts 1 to 4)
