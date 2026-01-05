@@ -142,6 +142,11 @@ Given an ensamble of polymers, we can use tools from statistics to derive some p
 The first, most straightforward (yet illustrating)  approach is the Freely Jointed Chain model. The FJC is a chain consisting of \(N\) links, each of length \(b\) and able to point in any direction independently of each other (thus the simplicity).
 
 
+To characterize the spatial extent of the polymers, two standard measures of extent are introduced: the end-to-end vector $\mathbf{Q}$ and the radius of gyration $R_g$. The end-to-end vector is defined as $\mathbf{Q} = \mathbf{r}_N - \mathbf{r}_0$, and provides a direct measure of the global elongation of a polymer chain.The statistical quantity derived from it, $\langle Q^2 \rangle$, is directly related to experimental observables obtained from single-molecule techniques, including force--extension measurements using optical tweezers, as well as from scattering experiments through their connection to the structure factor. 
+
+The radius of gyration $R_g$ quantifies the spatial distribution of monomers around the center of mass of the chain and is defined as the mean squared distance of the monomers from this center. It provides a global measure of the polymer size and compactness that is less sensitive to instantaneous end-to-end fluctuations than $\mathbf{Q}$. Experimentally, $R_g$ is commonly accessed via small-angle neutron or X-ray scattering (SANS/SAXS), where it determines the low-$k$ behavior of the scattering intensity. Taken together, $\mathbf{Q}$ and $R_g$ offer complementary descriptions of polymer extent, allowing for a consistent comparison between numerical simulations and experimental measurements.
+
+The goal of this practical work is to analyze the conformational statistics of a freely jointed polymer chain using numerical simulations and to connect microscopic configurations with measurable macroscopic observables.
 	\section{Methods}
 	
 	\begin{itemize}
@@ -150,13 +155,66 @@ The first, most straightforward (yet illustrating)  approach is the Freely Joint
 		\item Time series + mean square and distributions statistical tools (theory) + Monte-Carlo
 		\item Summary of data produced (ex: Table)
 	\end{itemize}
+\subsection{Analysis of FJC polymer configurations}
+\label{subsec:analysisFJC}
+
 
   The first script analyzes the simulation data of a \(3D\) FJC polymer for different chain lenghts \(N\). 
   The parameters are the bond length \(b\), the \(N\) values we wish to test for, and the number of configurations \(T\) we wish to analyze.
   An XYZ file containing T polymer configurations is read, and for every configuration the end-to-end distance \(Q\) and the radius of gyration \(R_{g}\) is computed. Finally both quantities are squared and averaged over all configurations yielding \(\langle Q^2\rangle$ and $\langle R_g^2\rangle\). This algorithm is looped over for every \(N\).	
 
+\begin{algorithm}[H]
+\caption{Analysis of FJC Polymer Configurations: $\langle Q^2 \rangle$ and $\langle R_g^2 \rangle$}
+\begin{algorithmic}[1]
+\State Set bond length $b$ and list of chain lengths $\{N\}$
+\State Set number of configurations $T$
+\State Initialize arrays $\langle Q^2 \rangle_{\text{sim}}$ and $\langle R_g^2 \rangle_{\text{sim}}$
+
+\For{each chain length $N$}
+    \State Initialize position arrays $\{X,Y,Z\}$ of size $T \times (N+1)$
+    \State Open trajectory file     
+    \For{$t = 1$ to $T$}
+        \For{$i = 1$ to $N+1$}
+            \State Read monomer coordinates $(x_i,y_i,z_i)$
+            \State Store coordinates in $X(t,i), Y(t,i), Z(t,i)$
+        \EndFor
+    \EndFor
+    \State Initialize arrays $Q(t)$ and $R_g(t)$
+    
+    \For{$t = 1$ to $T$}
+        \State Compute end-to-end distance
+        \State Compute center of mass
+        \State Compute radius of gyration
+    \EndFor
+    
+    \State Compute ensemble averages
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+\subsection{Statistical analysis of Q}
+\label{subsec:Q_analysis}
+
 
 The second script is built over the first one. The only extra parameter needed are the number of bins for the histogram. After computing the end-to-end distance \(Q\), the algorithm builds a histogram out of these values, treating them as samples from a probability distribution. The histogram is then normalized so that it can be directly compared to the gaussian distribution.
+
+
+\begin{algorithm}[H]
+\caption{Statistical analysis of Q}
+\begin{algorithmic}[1]
+\State Replicate Algorithm No.1
+\State Set the number of bins
+\State Construct normalized histogram of $Q$ values to estimate $P(Q)$
+\State Evaluate theoretical distribution:
+\[
+P(Q) = 4\pi Q^2 \left( \frac{3}{2\pi N b^2} \right)^{3/2}
+\exp\!\left( -\frac{3 Q^2}{2 N b^2} \right)
+\]
+\State Compare simulated and theoretical distributions
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Structure Factor}
+\label{subsec:structure}
 
 
 The third simulation focuses on computing the structure factor for a polymer of \texttt{N = 100} and \texttt{b = 3}. An array \(k\) is introduced, spanning values from 0 to 1 (in our case, sampling every 0.01 steps). One of the files containing the simulated polymers is held in memory. Then, we use the formula  
@@ -172,6 +230,30 @@ where \(\mathbf{R}_{i}\),\(\mathbf{R}_{i}\) are coordinates of the monomers in 3
 
 Then, the Guinier approximation is computed on the same \(k\) array to compare them side by side.
 
+\begin{algorithm}[H]
+\caption{Structure Factor and Guinier approximation}
+\begin{algorithmic}[1]
+\State Set bond length $b$, chain length $N$, and number of configurations $T$
+\State Define a range of scattering wave vectors $k$
+
+\For{each value of $k$}
+    \For{each pair of monomers $(i,j)$}
+        \State Compute distance between monomers $i$ and $j$
+        \If{distance is zero}
+            \State Assign unit contribution
+        \Else
+            \State Assign sinc-like contribution depending on distance and $k$
+        \EndIf
+    \EndFor
+\EndFor
+
+\State Sum contributions over all monomer pairs to obtain the structure factor
+\State Compute the radius of gyration from model parameters
+\State Evaluate the Guinier approximation using the computed $R_g$
+
+\State Compare numerical structure factor with the Guinier approximation in the low-$k$ regime
+\end{algorithmic}
+\end{algorithm}
 \subsection{Polimer Extension}
 A considerable ammount of attention has been driven toward the physical manipulation of polymers that are not large to be on termodynamic equilibrium, the extension of a polymer by the stretching of a canteliver is a recurrent example \cite{Manca2012} in this regard, an expression for the force - extension relationship has been found by \cite{extensionRef}.  
 

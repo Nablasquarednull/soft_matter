@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex report"] 0 "report.aux" "report.bbl" "report" 1767344558.21447 -1
+["bibtex report"] 1767618120.73311 "report.aux" "report.bbl" "report" 1767620424.28445 0
   "./cite.bib" 1767092491.53483 1264 e7c99a3b8f450463cfce62f346e87ace ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/bibtex/bst/base/plain.bst" 1 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "report.aux" 1767344558.06432 2621 5fbcef13928b002d2cc93ebbae05fe99 "pdflatex"
+  "report.aux" 1767620424.12413 5006 c6ef29548fc48a86b20712ac426ce053 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1767344557.51303 "report.tex" "report.pdf" "report" 1767344558.2146 2
+["pdflatex"] 1767620423.34838 "report.tex" "report.pdf" "report" 1767620424.28459 2
   "../code/Guinier_approx.png" 1767342308.72811 33296 d6d9977d9abcf088012c7a490983a3af ""
   "../code/Histogram_Q.pdf" 1767101523.04162 25273 bed2a3549fddf2d8c52920b0449e6baa ""
   "../code/Q2_vs_N_theory.pdf" 1767101523.04162 45858 6ad9d53f51b1bd716547ce76466c2419 ""
@@ -147,6 +147,9 @@
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/generic/uniquecounter/uniquecounter.sty" 1 7008 f92eaa0a3872ed622bbf538217cd2ab7 ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/generic/xkeyval/xkeyval.tex" 1 19231 27205ee17aaa2902aea3e0c07a3cfc65 ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/generic/xkeyval/xkvutils.tex" 1 7677 9cb1a74d945bc9331f2181c0a59ff34a ""
+  "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/algorithmicx/algorithmicx.sty" 1 26750 ce139c05a983e19ddca355b43e29c395 ""
+  "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/algorithmicx/algpseudocode.sty" 1 3457 d9077efe6b74c5a094199256af8d7d9a ""
+  "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/algorithms/algorithm.sty" 1 3249 15763257e50278eef5db1952ccde229c ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/amsmath/amsbsy.sty" 1 2222 2166a1f7827be30ddc30434e5efcee1b ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/amsmath/amsgen.sty" 1 4173 d22509bc0c91281d991b2de7c88720dd ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/amsmath/amsmath.sty" 1 88370 c780f23aea0ece6add91e09b44dca2cd ""
@@ -157,6 +160,7 @@
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/base/atbegshi-ltx.sty" 1 2963 d8ec5a1b4e0a106c5c737900202763e4 ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/base/atveryend-ltx.sty" 1 2378 14b657ee5031da98cf91648f19642694 ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/base/fontenc.sty" 1 5275 0d62fb62162c7ab056e941ef18c5076d ""
+  "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/base/ifthen.sty" 1 5525 9dced5929f36b19fa837947f5175b331 ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/base/size10.clo" 1 8448 5cf247d4bd0c7d5d711bbbdf111fae2e ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/caption/caption.sty" 1 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/tex/latex/caption/caption3.sty" 1 72619 ee90b6612147680fd73c3b1406a74245 ""
@@ -234,12 +238,18 @@
   "/nix/store/kwv3q6nxxb3rgyml0nal2q4ln0hnpfhr-texlive-2024-env/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1 5467241 f2f87cf5f9ad8a56ed051fe73ee84901 ""
   "/nix/store/kwv3q6nxxb3rgyml0nal2q4ln0hnpfhr-texlive-2024-env/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1 3353354 03e2e815cb988c5cf638af704cef84bd ""
   "/nix/store/kwv3q6nxxb3rgyml0nal2q4ln0hnpfhr-texlive-2024-env/share/texmf-var/web2c/texmf.cnf" 1 43655 b7f27ea0fd6325cd420a8b1f7f39d6db ""
+  "figures/Q_x_step.pdf" 1767617938.2849 68523 0e5d377841bd99a15022f54d5021e4bc ""
+  "figures/extension.pdf" 1767617938.2849 12217 bba1a57671222e3ce97d5d38b5aa7fda ""
+  "figures/step_1.png" 1767617938.2849 104703 8941b24084b80e0f830005f06e7b8b36 ""
+  "figures/step_4.png" 1767617938.2859 105490 8b57682ee9ad8c44aa987cf3250e007c ""
+  "figures/step_60.png" 1767617938.2859 112782 2afebb77a12e959375ca923be7da4749 ""
+  "figures/step_99.png" 1767617938.2879 115267 8d4ac9ee824a4ae26df4b3413ec533f0 ""
   "img1.jpg" 0 -1 0 ""
   "img2.jpg" 0 -1 0 ""
-  "report.aux" 1767344558.06432 2621 5fbcef13928b002d2cc93ebbae05fe99 "pdflatex"
-  "report.bbl" 1766920049.75187 943 ee8d4b98009a84598cc6431f36f05a87 "bibtex report"
-  "report.out" 1767344558.06432 526 ea46b8c858990adab22b633a1cf4e6be "pdflatex"
-  "report.tex" 1767344555.82526 9200 d6158feb74abdfe3b1df9c87dbdb9730 ""
+  "report.aux" 1767620424.12413 5006 c6ef29548fc48a86b20712ac426ce053 "pdflatex"
+  "report.bbl" 1767618120.77733 943 ee8d4b98009a84598cc6431f36f05a87 "bibtex report"
+  "report.out" 1767620424.12513 1261 227a04a3e4f79b17fdbfdc2a7c946959 "pdflatex"
+  "report.tex" 1767620423.07712 16720 6518fe2d52b708632b6e77d3cbe3d71c ""
   (generated)
   "report.aux"
   "report.log"
