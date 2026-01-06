@@ -180,6 +180,22 @@ The goal of this practical work is to analyze the conformational statistics of a
 \subsection{Statistical analysis of Q}
 \label{subsec:Q_analysis}
 
+\begin{table}[h]
+\centering
+\caption{First five values of the end-to-end distance $Q$ and radius of gyration $R_g$ for a freely jointed chain with $N=10$.}
+\label{tab:head_data_N10}
+\begin{tabular}{cc}
+\hline
+$Q$ & $R_g$ \\
+\hline
+5.9578  & 3.4400 \\
+5.3914  & 3.9725 \\
+4.9030  & 2.6268 \\
+13.2570 & 4.9119 \\
+3.6538  & 3.5163 \\
+\hline
+\end{tabular}
+\end{table}
 
 The second script is built over the first one. The only extra parameter needed are the number of bins for the histogram. After computing the end-to-end distance \(Q\), the algorithm builds a histogram out of these values, treating them as samples from a probability distribution. The histogram is then normalized so that it can be directly compared to the gaussian distribution.
 
@@ -242,7 +258,7 @@ Then, the Guinier approximation is computed on the same \(k\) array to compare t
 \end{algorithm}
  
 \subsection{Polimer Extension}
-A considerable ammount of attention has been driven toward the study of polymers that are not large to be on termodynamic equilibrium, the extension of a polymer by the stretching of a cantilever is a recurrent example \cite{Chen2010} in this regard, an expression for the force - extension relationship has been found by \cite{extensionRef}.  
+A considerable ammount of attention has been driven toward the study of polymers that are not large to be on termodynamic equilibrium, the extension of a polymer by the stretching of a cantilever is a recurrent example \cite{Manca} in this regard, an expression for the force - extension relationship has been found by \cite{extensionRef}.  
 
 \begin{equation}
   | \vec{Q} \cdot \vec{u}_x | = N b \left[ \coth{\alpha} - \frac{1}{\alpha}\right];
@@ -300,7 +316,7 @@ T. This energy-based acceptance allows the algorithm to capture thermal fluctuat
 	\section{Results and Discussion}
    \subsection{Analysis of FJC Polymer}
   \label{subsec:algo1}
-  Figure \ref{fig:whatever} shows qualitatively the figures of measure approximated against the theoretical results. It is evident that the scaling of the parameter N does not influence the precision of the figures of measure, as they remain consistent with theory.
+  Figure \ref{fig:whatever} shows qualitatively the figures of measure approximated against the theoretical results. It is evident that the scaling of the parameter N does not influence the precision of the figures of measure, as they remain consistent with theory. Moreover, a linear regression shows nearly perfect linear scaling ($\langle Q^2  = t  N^{0.997} \rangle$), which indicates
 	\begin{figure}[ht]
 		\begin{minipage}{.45\linewidth}
 			\centering
@@ -396,6 +412,12 @@ In figure \ref{fig:histogram} it is seen that with a sufficiently high number of
 	\section{Conclusion}
 	
 The numerical simulations of the Freely Jointed Chain (FJC) model show excellent agreement with theoretical predictions across all investigated observables. The mean-square end-to-end distance $\langle Q^{2} \rangle$ and the mean-square radius of gyration $\langle R_{g}^{2} \rangle$ scale linearly with the chain length $N$, in accordance with the ideal-chain relations $\langle Q^{2} \rangle = Nb^{2}$ and $\langle R_{g}^{2} \rangle = Nb^{2}/6$. The probability distribution of the end-to-end distance $Q$ obtained from simulations closely follows the expected Gaussian form, confirming correct sampling of the equilibrium ensemble. The numerically computed structure factor $I(k)$ reproduces the characteristic low-$k$ behavior of an ideal polymer and agrees well with the Guinier approximation in the appropriate regime. Furthermore, Monte Carlo simulations of polymer stretching under an external force yield a force--extension curve in strong quantitative agreement with the analytical FJC prediction. The root--mean--square error between the simulated and theoretical mean extension in the force range $0$--$10\,\mathrm{pN}$ is $\mathrm{RMSE}=2.19\,\mathrm{nm}$, corresponding to approximately $2\%$ of the polymer contour length, with deviations attributable to finite chain length effects and thermal fluctuations.
+
+In conclusion, the numerical simulations performed for the Freely Jointed Chain model successfully reproduce the fundamental statistical and mechanical properties of ideal polymer chains. The mean-square end-to-end distance and the mean-square radius of gyration exhibit the expected linear scaling with the chain length. A log--log linear regression of the simulation data yields $\langle Q^{2} \rangle \sim N^{0.997}$ and $\langle R_{g}^{2} \rangle \sim N^{0.982}$, in excellent agreement with the theoretical prediction of unit scaling exponent for an ideal chain. The probability distribution of the end-to-end distance follows the Gaussian form characteristic of equilibrium FJC statistics, and the computed structure factor is consistent with the Guinier approximation in the low-$k$ regime. Additionally, Monte Carlo simulations of polymer stretching under an external force produce a force--extension relation that closely matches the analytical FJC model, with deviations limited to a few percent of the polymer contour length. These results validate both the numerical methodology and the physical assumptions of the Freely Jointed Chain model, while highlighting the influence of finite-size effects and thermal fluctuations.
+
+
+
+
   \nocite{*}
 
 \newpage
