@@ -127,13 +127,6 @@
 	%%%MAIN TEXT%%%
 	
 	\section{Introduction}
-	
-	\begin{itemize}
-		\item General introduction about physics of polymer. Discrete models. Examples
-		\item Theory of FJC model.
-		\item Presentation of measure of extent (metrics). Relationship with experimental measurement.
-		\item Goal of the practical work
-	\end{itemize}
 Polymer physics deals with complex substances through a simple approach. Understanding the properties of polymers from a molecular point of view is key to unveil their complexity.
 
 Given an ensamble of polymers, we can use tools from statistics to derive some properties that apply to the ensamble at any given instant. To do so we model each polymer as a (continuous or discrete) ideal chain of monomers along with some constraints. Some examples of these models include the Freely Jointed Chain, the Freely Rotating Chain, the wormlike chain, the hindered rotating chain, the rotational isometric state model, among others \cite{Rubinstein}.
@@ -147,13 +140,6 @@ The radius of gyration $R_g$ quantifies the spatial distribution of monomers aro
 
 The goal of this practical work is to analyze the conformational statistics of a freely jointed polymer chain using numerical simulations and to connect microscopic configurations with measurable macroscopic observables.
 	\section{Methods}
-	
-	\begin{itemize}
-		\item Numerical simulations: Parameters + Brief description of the algorithm
-		\item Examples of structures generated
-		\item Time series + mean square and distributions statistical tools (theory) + Monte-Carlo
-		\item Summary of data produced (ex: Table)
-	\end{itemize}
 \subsection{Analysis of FJC polymer configurations}
 \label{subsec:analysisFJC}
 
@@ -312,7 +298,50 @@ T. This energy-based acceptance allows the algorithm to capture thermal fluctuat
 	\end{figure}
 	
 	\section{Results and Discussion}
+   \subsection{Analysis of FJC Polymer}
+  \label{subsec:algo1}
+  Figure \ref{fig:whatever} shows qualitatively the figures of measure approximated against the theoretical results. It is evident that the scaling of the parameter N does not influence the precision of the figures of measure, as they remain consistent with theory.
+	\begin{figure}[ht]
+		\begin{minipage}{.45\linewidth}
+			\centering
+			\includegraphics[height=4cm]{../code/Q2_vs_N_theory.pdf}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{.45\linewidth}
+			\centering
+			\includegraphics[height=4cm]{../code/Rg2_vs_N_theory.pdf}
+		\end{minipage}		
+		\caption{$\langle Q^{2}\rangle$ (left) and $\langle R_{g}^{2}\rangle$ (right)}
+    \label{fig:whatever}
+	\end{figure}
+\subsection{Statistical analysis of Q}
+\label{subsec:statistical_analisis}
 
+In figure \ref{fig:histogram} it is seen that with a sufficiently high number of bins, the simulated disitribution ressembles the gaussian one. After a few trials, we opted for 50 bins in our algorithm, since it is sufficient to show the nature of the distribution.
+  \begin{figure}[H]
+      \begin{minipage}{0.95\linewidth}
+      \centering
+      \includegraphics[height=4cm]{../code/Histogram_Q.pdf}
+      \end{minipage}
+      \caption{Probability distribution}
+      \label{fig:histogram}
+  \end{figure}
+   \begin{figure}[H]
+      \label{fig:structure}
+      \begin{minipage}{0.95\linewidth}
+      \centering
+      \includegraphics[height=4cm]{../code/structure_factor.png}
+      \end{minipage}
+      \caption{Structure factor (simulated)}
+  \end{figure}
+   \begin{figure}[H]
+      \label{fig:comparison}
+      \begin{minipage}{0.95\linewidth}
+      \centering
+      \includegraphics[height=4cm]{../code/Guinier_approx.png}
+      \end{minipage}
+      \caption{Structure factor comparison (simulation and Guinier approximation)}
+  \end{figure}
  \subsection{Polymer Extension}
 
  The Monte-Carlo simulation showed a good agreement with the theoretical results. The convergence of the extension, through the random iterations, is appreciable in figure \ref{fig:ex4_1}, the extension reaches the theoretical value near the step 2000. On the other hand, on \ref{fig:ex4_2} two curves are plotted, one is the curve for the relation of the force applied to the monomer to the mean value of the extension, is qualitatively appreciable that both curves touch and differ only by small values. 
@@ -332,48 +361,6 @@ T. This energy-based acceptance allows the algorithm to capture thermal fluctuat
   \]
   corresponding to an average deviation of approximately $2\%$ of the polymer contour length. This result indicates strong quantitative agreement between the Monte Carlo simulation and the FJC theoretical prediction, with deviations attributable to finite chain length and thermal fluctuations.
 
-	\begin{itemize}
-		\item Description of the numerical results (Parts 1 to 4)
-		\item Comparison with theoretical results (qualitatively and quantitatively)
-		\item Discussion
-	\end{itemize}
-	\begin{figure}[ht]
-		\begin{minipage}{.45\linewidth}
-			\centering
-			\includegraphics[height=4cm]{../code/Q2_vs_N_theory.pdf}
-		\end{minipage}
-		\hfill
-		\begin{minipage}{.45\linewidth}
-			\centering
-			\includegraphics[height=4cm]{../code/Rg2_vs_N_theory.pdf}
-		\end{minipage}		
-		\caption{$\langle Q^{2}\rangle$ (left) and $\langle R_{g}^{2}\rangle$ (right)}
-	\end{figure}
-
-  \begin{figure}[H]
-      \label{fig:histogram}
-      \begin{minipage}{0.95\linewidth}
-      \centering
-      \includegraphics[height=4cm]{../code/Histogram_Q.pdf}
-      \end{minipage}
-      \caption{Probability distribution}
-  \end{figure}
-   \begin{figure}[H]
-      \label{fig:structure}
-      \begin{minipage}{0.95\linewidth}
-      \centering
-      \includegraphics[height=4cm]{../code/structure_factor.png}
-      \end{minipage}
-      \caption{Structure factor (simulated)}
-  \end{figure}
-   \begin{figure}[H]
-      \label{fig:comparison}
-      \begin{minipage}{0.95\linewidth}
-      \centering
-      \includegraphics[height=4cm]{../code/Guinier_approx.png}
-      \end{minipage}
-      \caption{Structure factor comparison (simulation and Guinier approximation)}
-  \end{figure}
 
 \begin{figure}[htbp]
     \centering

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex report"] 1767618120.73311 "report.aux" "report.bbl" "report" 1767620424.28445 0
+["bibtex report"] 1767618120.73311 "report.aux" "report.bbl" "report" 1767702135.3414 0
   "./cite.bib" 1767092491.53483 1264 e7c99a3b8f450463cfce62f346e87ace ""
   "/nix/store/kab81cjb4mqgwbmd5jdyc1b1ippksx3c-texlive-2024-env-texmfdist/bibtex/bst/base/plain.bst" 1 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "report.aux" 1767620424.12413 5006 c6ef29548fc48a86b20712ac426ce053 "pdflatex"
+  "report.aux" 1767702135.17009 5646 f8a044236678a01469bec35607d9406c "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1767620423.34838 "report.tex" "report.pdf" "report" 1767620424.28459 2
+["pdflatex"] 1767702134.28152 "report.tex" "report.pdf" "report" 1767702135.34155 2
   "../code/Guinier_approx.png" 1767342308.72811 33296 d6d9977d9abcf088012c7a490983a3af ""
   "../code/Histogram_Q.pdf" 1767101523.04162 25273 bed2a3549fddf2d8c52920b0449e6baa ""
   "../code/Q2_vs_N_theory.pdf" 1767101523.04162 45858 6ad9d53f51b1bd716547ce76466c2419 ""
@@ -240,16 +240,16 @@
   "/nix/store/kwv3q6nxxb3rgyml0nal2q4ln0hnpfhr-texlive-2024-env/share/texmf-var/web2c/texmf.cnf" 1 43655 b7f27ea0fd6325cd420a8b1f7f39d6db ""
   "figures/Q_x_step.pdf" 1767617938.2849 68523 0e5d377841bd99a15022f54d5021e4bc ""
   "figures/extension.pdf" 1767617938.2849 12217 bba1a57671222e3ce97d5d38b5aa7fda ""
+  "figures/fig_1.png" 1767686758.96996 237322 acf943c2955fa7771d5e2a2d852f9717 ""
+  "figures/fig_2.png" 1767686758.97196 290695 4c92ca084e12f7ff4c4ddb3a7f1f68f5 ""
   "figures/step_1.png" 1767617938.2849 104703 8941b24084b80e0f830005f06e7b8b36 ""
   "figures/step_4.png" 1767617938.2859 105490 8b57682ee9ad8c44aa987cf3250e007c ""
   "figures/step_60.png" 1767617938.2859 112782 2afebb77a12e959375ca923be7da4749 ""
   "figures/step_99.png" 1767617938.2879 115267 8d4ac9ee824a4ae26df4b3413ec533f0 ""
-  "img1.jpg" 0 -1 0 ""
-  "img2.jpg" 0 -1 0 ""
-  "report.aux" 1767620424.12413 5006 c6ef29548fc48a86b20712ac426ce053 "pdflatex"
+  "report.aux" 1767702135.17009 5646 f8a044236678a01469bec35607d9406c "pdflatex"
   "report.bbl" 1767618120.77733 943 ee8d4b98009a84598cc6431f36f05a87 "bibtex report"
-  "report.out" 1767620424.12513 1261 227a04a3e4f79b17fdbfdc2a7c946959 "pdflatex"
-  "report.tex" 1767620423.07712 16720 6518fe2d52b708632b6e77d3cbe3d71c ""
+  "report.out" 1767702135.17109 1781 b8071d7b2eda6fb5712ce11b63b8ff0d "pdflatex"
+  "report.tex" 1767702132.77601 18244 3256b3a04c65354df6a1665330f40f63 ""
   (generated)
   "report.aux"
   "report.log"
